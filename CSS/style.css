@@ -1,0 +1,419 @@
+/*Resetar estilos globais 
+- para evitar problemas no desenvolvimento no css*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+/***************************************************/
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    /* Sobre a Viewport:
+        
+    Para usar a largura ou a altura da viewport:
+        - A medida vh é igual a 1/100 da altura da viewport. Então, por exemplo, se a altura do navegador é 900px, 1vh equivale a 9px.
+        - Analogamente, se a largura da viewport é 750px, 1vw equivale a 7.5px.
+
+    O que é a Viewport (janela de visualização)?
+        - A Viewport é a área visível do usuário em uma página da web. Ela varia com o dispositivo e será menor em um telefone celular do que em uma tela de computador.
+        - Antes dos tablets e telefones celulares, as páginas da web eram projetadas apenas para telas de computador, e era comum que as páginas tivessem um design estático e um tamanho fixo.
+        - Então, quando começamos a navegar na Internet usando tablets e telefones celulares, as páginas da web de tamanho fixo eram muito grandes para caber na janela de visualização. Para corrigir isso, os navegadores nesses dispositivos reduziram a página da web inteira para caber na tela. Isso não era perfeito! Mas uma solução rápida.
+
+    Configurando a janela de visualização:
+        https://www.w3schools.com/css/css_rwd_viewport.asp
+    */
+    background-color: #FAFAFA;
+    padding: 0;
+    display:flex;
+    justify-content:center;
+}
+.content{
+    margin-top: 8vh;
+}
+
+.instagram-wrapper{
+    display:flex;
+    /*O que é o "display:flex"?
+        Quando setamos "display:flex" em um elemento HTML ele vira um flex container. Significa que, todos os elementos que estiverem dentro dele  vão ficar em LINHA, ele sempre vai ficar em linha até a borda E VÃO CONTINUAR PASSANDO. Isso é o "display:flex", ELE SEMPRE VAI ALINHAR TUDO EM LINHA, ocupando o espaço que os elementos realmente necessitam dentro daquele container.
+        ELE (display:flex) POR SI, SEMPRE VAI ALINHAR OS ELEMENTOS EM LINHA.
+    */
+    align-items: center;
+    /*O que é o "align-items"?
+        É o alinhamento vertical dos nossos elementos, ele é o eixo y.
+    */
+    justify-content: start; /*start = começar da esquerda para a direita*/
+    /*O que é o "justify-content"?
+        É o alinhamento horizontal dos nossos elementos, ele é o eixo x.
+    */
+    width: 100%;
+    height: 80%;
+    margin-left: 2.5vw;
+    margin-right: 1vw;
+}
+
+.instagram-phone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+}
+.instagram-phone img{
+    height: 38.5rem;
+}
+
+.perfil-celular{
+    position: absolute;
+    z-index: 5;
+}
+.perfil-celular img{
+    height: 27.5rem;
+    padding-left: 5.52rem;
+    padding-top: 0.75rem;
+}
+
+.instagram-continue{
+    display: flex;
+    align-items: center;/*
+        AGORA está na HORIZONTAL
+    */
+    justify-content: space-around;/*
+        AGORA está na VERTICAL
+    */
+    flex-direction: column;/*
+    Ele girou a div, ou seja, o que era linha (horizontal) por causa do "display:flex" agora virou coluna (vertical), por causa do "flex-direction: column"
+    */
+    width: 50%;
+    min-height: 34rem;
+}
+
+
+.group, .get-the-app{
+    margin-left: -195px;
+}
+
+.group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;/*
+        Vai inverter os eixos
+    */
+    background-color: #ffffff;
+    width: 75%;
+    padding-top: 2.2rem;
+    padding-bottom: 2rem;
+    border: 1px solid lightgrey;
+    margin-top: 3rem;
+    z-index: 6;
+}
+
+.group:nth-child(1){
+    /*:nth-child()
+        - É uma propriedade de um seletor, que pega os filhos do elemento.
+        --> Exemplo:
+            .group:nth-child(1) = pega o primeiro filho;
+            .group:nth-child(2) = pega o segundo filho na ordem;
+        Obs.: Sempre na ordem de elementos.
+    */
+    min-height: 19rem;
+    font-size: 0.82rem;
+    font-weight: bold;
+}
+
+.group:nth-child(2){
+    margin-top: 0.65rem;
+    font-size: 13px;
+}
+
+.instagram-logo{
+    height: 3.3rem;
+    margin-top: 2px;
+    margin-bottom: 16px;
+}
+
+.profile-photo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50%;/*Deixa a imagem circular*/
+    overflow: hidden; /*
+        Para a imagem não exceder o tamanho da div para fora.
+    */
+    margin-bottom: 30px;
+}
+
+.profile-photo img{
+    height: 5.5rem;
+}
+
+.instagram-login{
+    background-color: #0095F6;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.instagram-logout{
+    color:#0095F6;
+    margin-top: 1rem;
+}
+
+.not-account{
+    color: rgb(160, 160, 160);
+}
+
+.link-blue{
+    color:#0095F6;
+    font-size: 0.82rem;
+    font-weight: bold;
+}
+
+.get-the-app{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    padding: 1.3rem 0;
+    font-size: 0.85rem;
+} 
+
+.download{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;/*
+        Deixa os elementos com espaçamento iguais em todos os lados, inclusive no meio. 
+    */
+    padding: 0.5rem;
+}
+
+.app-download{
+    height: 3rem;
+    width: 20rem;
+    background-size: cover; /* 
+        Usamos ele pois vamos setar usando o ":nth-child()"
+    */
+}
+
+.app-download img{
+    height: 3rem;
+    width: 9rem;
+    padding: 4px;
+}
+
+footer{
+    padding: 4rem 0 0.5rem 0;
+    color: rgb(160, 160, 160);
+    font-size: small;
+    text-align: center;
+ }
+
+.quem-fez a{
+    color: rgb(160, 160, 160);
+}
+
+
+/* MEDIAS QUERIES
+
+*/
+
+/*Tablet*/
+@media (max-width: 1520px){
+    body{
+        width: 100%;
+        min-height: 0;
+        justify-content:center;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: -2%;
+        margin-bottom: 2%;
+    }
+    .content{
+        margin-left: 0;
+    }
+    .instagram-wrapper{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+    }
+    
+}
+
+/*Celular*/
+@media (max-width: 780px){
+    /***************** Não mexer *****************/
+    body{
+        width: 100%;
+        min-height: 0;
+        display: inline-table;
+        justify-content:center;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        font-size: 16px;
+    }
+
+    .content{
+        margin-top: 0;
+    }
+    
+    .instagram-phone{
+        display: none;
+    }
+
+    .group, .get-the-app{
+        margin-left: 0;
+    }
+    /**********************************************/
+
+    .instagram-wrapper{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 80%;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+
+    }
+    
+    .instagram-phone img{
+        height: 38.5rem;
+    }
+    
+    .perfil-celular{
+        position: absolute;
+        z-index: 5;
+    }
+    .perfil-celular img{
+        height: 27.5rem;
+        padding-left: 5.52rem;
+        padding-top: 0.75rem;
+    }
+    
+    .instagram-continue{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        width: 50%;
+        min-height: 34rem;
+    }
+    
+    .group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        background-color: #ffffff;
+        width: 75%;
+        padding-top: 2.2rem;
+        padding-bottom: 2rem;
+        border: 1px solid lightgrey;
+        margin-top: 3rem;
+        z-index: 6;
+    }
+    
+    .group:nth-child(1){
+        min-height: 19rem;
+        font-size: 0.82rem;
+        font-weight: bold;
+    }
+    
+    .group:nth-child(2){
+        margin-top: 0.65rem;
+        font-size: 13px;
+    }
+    
+    .instagram-logo{
+        height: 3.3rem;
+        margin-top: 2px;
+        margin-bottom: 16px;
+    }
+    
+    .profile-photo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+    
+    .profile-photo img{
+        height: 5.5rem;
+    }
+    
+    .instagram-login{
+        background-color: #0095F6;
+        color: #ffffff;
+        padding: 8px;
+        border-radius: 4px;
+    }
+    
+    .instagram-logout{
+        color:#0095F6;
+        margin-top: 1rem;
+    }
+    
+    .not-account{
+        color: rgb(160, 160, 160);
+    }
+    
+    .link-blue{
+        color:#0095F6;
+        font-size: 0.82rem;
+        font-weight: bold;
+    }
+    
+    .get-the-app{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 50%;
+        padding: 1.3rem 0;
+        font-size: 0.85rem;
+    } 
+    
+    .download{
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        padding: 0.5rem;
+    }
+    
+    .app-download{
+        height: 3rem;
+        width: 20rem;
+        background-size: cover;
+    }
+    
+    .app-download img{
+        height: 3rem;
+        width: 9rem;
+        padding: 4px;
+    }
+    
+    footer{
+        padding: 4rem 0 0.5rem 0;
+        color: rgb(160, 160, 160);
+        font-size: small;
+        text-align: center;
+     }
+    
+    .quem-fez a{
+        color: rgb(160, 160, 160);
+    }   
+}
